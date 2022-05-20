@@ -18,6 +18,6 @@ async def on_startup(_) -> None:
     scheduler.start()
 
 
-async def on_shutdown() -> None:
+async def on_shutdown(_) -> None:
     scheduler.shutdown()
     await Tortoise.close_connections()
